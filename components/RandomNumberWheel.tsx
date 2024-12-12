@@ -3,17 +3,12 @@
 
 import React, { useState, useRef, useEffect } from 'react';
 
-interface RandomNumberWheelProps {
-  min?: number;
-  max?: number;
-}
 
-export default function RandomNumberWheel({ 
-  min = 1, 
-  max = 100 
-}: RandomNumberWheelProps) {
+export default function RandomNumberWheel() {
   const [generatedNumber, setGeneratedNumber] = useState<number | null>(null);
   const [isSpinning, setIsSpinning] = useState(false);
+  const [min, setMin] = useState(1);
+  const [max, setMax] = useState(100);
   const [currentRandomNumbers, setCurrentRandomNumbers] = useState<number[]>([]);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const wheelRef = useRef({
@@ -154,7 +149,7 @@ export default function RandomNumberWheel({
             <input 
               type="number" 
               value={min} 
-              onChange={(e) => min = Number(e.target.value)}
+              onChange={(e) => setMin(Number(e.target.value))}
               className="w-full px-3 py-2 border rounded-md"
               disabled={isSpinning}
             />
@@ -164,7 +159,7 @@ export default function RandomNumberWheel({
             <input 
               type="number" 
               value={max} 
-              onChange={(e) => max = Number(e.target.value)}
+              onChange={(e) => setMax(Number(e.target.value))}
               className="w-full px-3 py-2 border rounded-md"
               disabled={isSpinning}
             />
