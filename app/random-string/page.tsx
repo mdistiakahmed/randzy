@@ -59,7 +59,7 @@ export default function RandomStringPage() {
             <div className="space-y-4 text-gray-800">
               <p className="leading-relaxed text-lg">
                 Random string generation is a sophisticated process that goes
-                beyond simple character randomization. It's a critical technique
+                beyond simple character randomization. It&apos;s a critical technique
                 used in cryptography, software development, and digital security
                 to create unpredictable and unique character sequences.
               </p>
@@ -242,7 +242,7 @@ export default function RandomStringPage() {
             </h3>
             <p className="text-gray-700 leading-relaxed">
               True randomness challenges our understanding of predictability.
-              It's not just about generating unpredictable numbers, but about
+              It&apos;s not just about generating unpredictable numbers, but about
               creating sequences that defy pattern recognition, statistical
               bias, and computational prediction.
             </p>
