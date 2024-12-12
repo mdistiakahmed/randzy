@@ -94,7 +94,7 @@ export default function RandomNumberGeneratorPage() {
             <RandomNumberWheel />
 
             {/* Enhanced SEO-friendly content section */}
-            <section className="mt-12 bg-gray-50 rounded-xl p-8 space-y-6">
+            <section className="mt-12  rounded-xl  space-y-6">
               <div className="grid md:grid-cols-2 gap-8">
                 <div>
                   <h2 className="text-2xl font-semibold text-blue-600 mb-4">
@@ -123,7 +123,7 @@ export default function RandomNumberGeneratorPage() {
                 </div>
               </div>
 
-              <div className="bg-white rounded-lg p-6 shadow-md">
+              <div className="bg-white rounded-lg shadow-md">
                 <h2 className="text-2xl font-semibold text-purple-600 mb-4">
                   Versatile Applications
                 </h2>
@@ -159,7 +159,7 @@ export default function RandomNumberGeneratorPage() {
               </div>
 
               <div className="mt-12 space-y-8">
-                <article className="bg-white p-6 rounded-lg shadow-md">
+                <article className="bg-white">
                   <h3 className="text-2xl font-semibold text-indigo-700 mb-4">
                     Understanding Random Number Generation
                   </h3>
@@ -179,7 +179,7 @@ export default function RandomNumberGeneratorPage() {
                   </div>
                 </article>
 
-                <article className="bg-white p-6 rounded-lg shadow-md">
+                <article className="bg-white mt-6 ">
                   <h3 className="text-2xl font-semibold text-green-700 mb-4">
                     Advanced Random Number Generation Techniques
                   </h3>
@@ -207,12 +207,12 @@ export default function RandomNumberGeneratorPage() {
                   </div>
                 </article>
 
-                <article className="bg-white p-6 rounded-lg shadow-md">
+                <article className="bg-white pt-6 ">
                   <h3 className="text-2xl font-semibold text-purple-700 mb-4">
                     Common Use Cases for Random Number Generators
                   </h3>
                   <ul className="grid md:grid-cols-3 gap-4 text-gray-700">
-                    <li className="bg-purple-50 p-4 rounded">
+                    <li className="bg-purple-50 pt-4 rounded">
                       <strong className="block mb-2">
                         Scientific Research
                       </strong>
@@ -243,7 +243,7 @@ export default function RandomNumberGeneratorPage() {
                   </ul>
                 </article>
 
-                <div className="text-center bg-blue-100 p-6 rounded-lg">
+                <div className="text-center  pt-6 rounded-lg">
                   <h3 className="text-2xl font-bold text-blue-800 mb-4">
                     Frequently Asked Questions
                   </h3>

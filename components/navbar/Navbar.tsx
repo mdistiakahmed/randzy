@@ -16,7 +16,7 @@ const toolCategories = [
       },
       {
         name: "Coin Flip",
-        href: "/tools/coin-flip",
+        href: "/coin-flip",
         icon: "💰",
         description: "Virtual coin toss for quick decisions",
       },
