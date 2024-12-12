@@ -95,7 +95,7 @@ const toolCategories = [
     tools: [
       {
         name: "Password Generator",
-        href: "/tools/password-generator",
+        href: "/password-generator",
         icon: "🔐",
         description: "Create strong, random passwords",
         color: "bg-gray-50",
@@ -103,7 +103,7 @@ const toolCategories = [
       },
       {
         name: "PIN Generator",
-        href: "/tools/pin-generator",
+        href: "/pin-generator",
         icon: "🔢",
         description: "Generate secure random PINs",
         color: "bg-emerald-50",
@@ -111,7 +111,7 @@ const toolCategories = [
       },
       {
         name: "Random String",
-        href: "/tools/random-string",
+        href: "/random-string",
         icon: "🧩",
         description: "Create random alphanumeric strings",
         color: "bg-cyan-50",
