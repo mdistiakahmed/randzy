@@ -10,7 +10,7 @@ const toolCategories = [
     items: [
       {
         name: "Number Generator",
-        href: "/tools/random-number",
+        href: "/random-number",
         icon: "🎲",
         description: "Generate random numbers within a specified range",
       },
