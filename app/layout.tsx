@@ -29,6 +29,9 @@ export const metadata: Metadata = {
     "interactive tools",
     "web utilities",
   ],
+  other: {
+    "google-site-verification": "2qBbxSReKB4tdytzvsFkyqJuk22Ry6lh8C5_VMJ08yI",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
