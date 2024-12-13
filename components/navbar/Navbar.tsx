@@ -22,7 +22,7 @@ const toolCategories = [
       },
       {
         name: "Dice Roller",
-        href: "/tools/dice-roller",
+        href: "/dice-roller",
         icon: "🎳",
         description: "Roll virtual dice with multiple configurations",
       },
@@ -33,19 +33,19 @@ const toolCategories = [
     items: [
       {
         name: "Name Picker",
-        href: "/tools/random-name",
+        href: "/random-name",
         icon: "👥",
         description: "Randomly select names from a list",
       },
       {
         name: "Group Divider",
-        href: "/tools/group-picker",
+        href: "/group-picker",
         icon: "🏁",
         description: "Divide participants into random groups",
       },
       {
         name: "Team Generator",
-        href: "/tools/team-generator",
+        href: "/team-generator",
         icon: "⚽",
         description: "Create balanced random teams",
       },
