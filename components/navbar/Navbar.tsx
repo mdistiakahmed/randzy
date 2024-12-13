@@ -38,39 +38,10 @@ const toolCategories = [
         description: "Randomly select names from a list",
       },
       {
-        name: "Group Divider",
-        href: "/group-picker",
-        icon: "🏁",
-        description: "Divide participants into random groups",
-      },
-      {
         name: "Team Generator",
         href: "/team-generator",
         icon: "⚽",
         description: "Create balanced random teams",
-      },
-    ],
-  },
-  {
-    name: "Decision Makers",
-    items: [
-      {
-        name: "Magic 8-Ball",
-        href: "/tools/magic-8-ball",
-        icon: "🎱",
-        description: "Get mystical answers to yes/no questions",
-      },
-      {
-        name: "Pro/Con List",
-        href: "/tools/pro-con-generator",
-        icon: "📊",
-        description: "Generate random pros and cons for decisions",
-      },
-      {
-        name: "Random Choice",
-        href: "/tools/random-choice",
-        icon: "🔀",
-        description: "Make random selections from multiple options",
       },
     ],
   },
