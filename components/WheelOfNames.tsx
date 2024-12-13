@@ -11,10 +11,10 @@ export default function WheelOfNames() {
 
   const [names, setNames] = useState([
     "Alice",
-    "Bob", 
-    "Charlie", 
-    "Diana", 
-    "Jordan"
+    "Bob",
+    "Charlie",
+    "Diana",
+    "Jordan",
   ]);
   const [inputName, setInputName] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -23,17 +23,17 @@ export default function WheelOfNames() {
   const colors = ["#3369e8", "#009925", "#d50f25", "#EEB211", "#d50f25"];
 
   const triggerConfetti = () => {
-    const canvas = document.createElement('canvas');
+    const canvas = document.createElement("canvas");
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
-    canvas.style.position = 'fixed';
-    canvas.style.top = '0';
-    canvas.style.left = '0';
-    canvas.style.pointerEvents = 'none';
-    canvas.style.zIndex = '9999';
+    canvas.style.position = "fixed";
+    canvas.style.top = "0";
+    canvas.style.left = "0";
+    canvas.style.pointerEvents = "none";
+    canvas.style.zIndex = "9999";
     document.body.appendChild(canvas);
 
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
     const particles: any[] = [];
@@ -47,7 +47,7 @@ export default function WheelOfNames() {
         color: colors[Math.floor(Math.random() * colors.length)],
         speedX: (Math.random() - 0.5) * 10,
         speedY: (Math.random() - 0.5) * 10,
-        alpha: 1
+        alpha: 1,
       });
     }
 
@@ -102,7 +102,7 @@ export default function WheelOfNames() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
     canvas.width = 400;
@@ -224,7 +224,7 @@ export default function WheelOfNames() {
 
   const removeNameAndClose = () => {
     if (winner) {
-      const newNames = names.filter(name => name !== winner);
+      const newNames = names.filter((name) => name !== winner);
       setNames(newNames);
       setIsModalOpen(false);
       setWinner(null);
@@ -233,33 +233,33 @@ export default function WheelOfNames() {
   };
 
   return (
-    <div className="container mx-auto mt-2 px-4 py-2 flex flex-col lg:flex-row space-y-8 md:space-y-0 md:space-x-8">
-      <div className="w-full max-w-md">
-        <canvas 
-          ref={canvasRef} 
+    <div className="container mx-auto mt-2 px-4 py-2 flex flex-col lg:flex-row items-center space-y-8 md:space-y-0 md:space-x-8">
+      <div className="w-full max-w-md md:pb-4">
+        <canvas
+          ref={canvasRef}
           className="w-full aspect-square rounded-full shadow-lg"
         />
       </div>
 
       <div className="w-full max-w-md">
         <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 mb-4">
-          <input 
-            type="text" 
+          <input
+            type="text"
             value={inputName}
             onChange={(e) => setInputName(e.target.value)}
-            onKeyDown={(e) => e.key === 'Enter' && handleAddName()}
-            placeholder="Enter a name" 
+            onKeyDown={(e) => e.key === "Enter" && handleAddName()}
+            placeholder="Enter a name"
             className="flex-grow px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           <div className="flex space-x-2">
-            <button 
+            <button
               onClick={handleAddName}
               disabled={!inputName.trim()}
               className="px-4 py-2 bg-blue-500 text-white rounded-md disabled:opacity-50 hover:bg-blue-600 w-full sm:w-auto"
             >
               Add
             </button>
-            <button 
+            <button
               onClick={shuffleNames}
               disabled={names.length < 2}
               className="px-4 py-2 bg-green-500 text-white rounded-md disabled:opacity-50 hover:bg-green-600 w-full sm:w-auto"
@@ -271,12 +271,12 @@ export default function WheelOfNames() {
 
         <div className="h-72 overflow-y-auto border rounded-md">
           {names.map((name, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className="flex justify-between items-center px-4 py-2 border-b hover:bg-gray-100"
             >
               <span>{name}</span>
-              <button 
+              <button
                 onClick={() => handleDeleteName(index)}
                 className="text-red-500 hover:text-red-700"
               >
@@ -293,13 +293,13 @@ export default function WheelOfNames() {
             <h2 className="text-2xl font-bold mb-4">🎉 The Winner is...</h2>
             <p className="text-4xl text-blue-600 mb-6">{winner}</p>
             <div className="flex justify-center space-x-4">
-              <button 
+              <button
                 onClick={removeNameAndClose}
                 className="px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600"
               >
                 Remove Name
               </button>
-              <button 
+              <button
                 onClick={() => {
                   setIsModalOpen(false);
                   isInitialRef.current = true;
