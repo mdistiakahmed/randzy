@@ -24,7 +24,7 @@ const toolCategories = [
       },
       {
         name: "Dice Roller",
-        href: "/tools/dice-roller",
+        href: "/dice-roller",
         icon: "🎳",
         description: "Roll virtual dice with multiple configurations",
         color: "bg-purple-50",
@@ -37,7 +37,7 @@ const toolCategories = [
     tools: [
       {
         name: "Name Picker",
-        href: "/tools/random-name",
+        href: "/random-name",
         icon: "👥",
         description: "Randomly select names from a list",
         color: "bg-orange-50",
@@ -45,7 +45,7 @@ const toolCategories = [
       },
       {
         name: "Group Divider",
-        href: "/tools/group-picker",
+        href: "/group-picker",
         icon: "🏁",
         description: "Divide participants into random groups",
         color: "bg-teal-50",
@@ -53,7 +53,7 @@ const toolCategories = [
       },
       {
         name: "Team Generator",
-        href: "/tools/team-generator",
+        href: "/team-generator",
         icon: "⚽",
         description: "Create balanced random teams",
         color: "bg-red-50",
@@ -66,7 +66,7 @@ const toolCategories = [
     tools: [
       {
         name: "Magic 8-Ball",
-        href: "/tools/magic-8-ball",
+        href: "/magic-8-ball",
         icon: "🎱",
         description: "Get mystical answers to yes/no questions",
         color: "bg-indigo-50",
@@ -74,7 +74,7 @@ const toolCategories = [
       },
       {
         name: "Pro/Con List",
-        href: "/tools/pro-con-generator",
+        href: "/pro-con-generator",
         icon: "📊",
         description: "Generate random pros and cons for decisions",
         color: "bg-yellow-50",
@@ -82,7 +82,7 @@ const toolCategories = [
       },
       {
         name: "Random Choice",
-        href: "/tools/random-choice",
+        href: "/random-choice",
         icon: "🔀",
         description: "Make random selections from multiple options",
         color: "bg-pink-50",
