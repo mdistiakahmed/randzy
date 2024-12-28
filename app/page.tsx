@@ -73,6 +73,14 @@ const toolCategories = [
         textColor: "text-emerald-600",
       },
       {
+        name: "UUID Generator",
+        href: "/uuid-generator",
+        icon: "🆔",
+        description: "Generate unique universal identifiers",
+        color: "bg-indigo-50",
+        textColor: "text-indigo-600",
+      },
+      {
         name: "Random String",
         href: "/random-string",
         icon: "🧩",

@@ -61,6 +61,12 @@ const toolCategories = [
         description: "Generate secure random PINs",
       },
       {
+        name: "UUID Generator",
+        href: "/uuid-generator",
+        icon: "🆔",
+        description: "Generate unique universal identifiers",
+      },
+      {
         name: "Random String",
         href: "/random-string",
         icon: "🧩",
