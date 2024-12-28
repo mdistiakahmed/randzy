@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     description:
       "Powerful online tool to generate, validate, and convert UUIDs for developers and tech professionals.",
     type: "website",
+    url: "https://randzy.com/uuid-generator",
     images: [
       {
         url: "/uuid.png",

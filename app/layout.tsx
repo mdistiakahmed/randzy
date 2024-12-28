@@ -66,9 +66,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  alternates: {
-    canonical: "https://randzy.com",
-  },
 };
 
 export default function RootLayout({
