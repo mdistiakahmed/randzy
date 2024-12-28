@@ -83,9 +83,9 @@ export default async function RandomCountryPage() {
                 Unlock Global Knowledge
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed mb-4">
-                Dive deep into the world's geographical tapestry with our
+                Dive deep into the world&apos;s geographical tapestry with our
                 cutting-edge Country Explorer. More than just a random
-                generator, it's an educational journey through continents,
+                generator, it&apos;s an educational journey through continents,
                 cultures, and global diversity.
               </p>
               <div className="grid grid-cols-2 gap-4 text-gray-600">
@@ -346,23 +346,26 @@ export default async function RandomCountryPage() {
             World of Independent Nations
           </h2>
           <p className="text-center text-gray-600 mb-8 max-w-3xl mx-auto">
-            Explore the diverse landscape of independent countries. Each flag represents a unique 
-            nation with its own rich history, culture, and global significance.
+            Explore the diverse landscape of independent countries. Each flag
+            represents a unique nation with its own rich history, culture, and
+            global significance.
           </p>
-          
+
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
             {countries
               .filter((country: any) => country.independent)
-              .sort((a: any, b: any) => a.name.common.localeCompare(b.name.common))
+              .sort((a: any, b: any) =>
+                a.name.common.localeCompare(b.name.common)
+              )
               .map((country: any) => (
-                <div 
-                  key={country.name.common} 
+                <div
+                  key={country.name.common}
                   className="bg-gray-50 rounded-lg p-3 shadow-md hover:shadow-xl transition-all duration-300 group"
                 >
                   <div className="aspect-video mb-2">
-                    <img 
-                      src={country.flags.svg} 
-                      alt={`Flag of ${country.name.common}`} 
+                    <img
+                      src={country.flags.svg}
+                      alt={`Flag of ${country.name.common}`}
                       className="w-full h-full object-cover rounded-md group-hover:scale-105 transition-transform"
                     />
                   </div>
@@ -370,8 +373,7 @@ export default async function RandomCountryPage() {
                     {country.name.common}
                   </h3>
                 </div>
-              ))
-            }
+              ))}
           </div>
         </section>
       </main>
