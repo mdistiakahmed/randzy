@@ -46,6 +46,13 @@ export const metadata: Metadata = {
 
 async function fetchAllCountries() {
   try {
+    // Add a fallback for build time
+    if (process.env.NODE_ENV === 'production') {
+      // Import a local JSON of countries as a fallback
+      const countriesModule = await import('@/data/countries.json');
+      return countriesModule.default;
+    }
+
     const response = await fetch("https://restcountries.com/v3.1/all", {
       next: { revalidate: 86400 }, // Cache for 24 hours
     });
