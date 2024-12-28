@@ -5,15 +5,15 @@ import React, { useState, useEffect } from "react";
 const CONTINENTS = [
   "All",
   "Africa",
-  "Asia", 
-  "Europe", 
+  "Asia",
+  "Europe",
   "North America",
-  "South America", 
-  "Oceania", 
-  "Antarctica"
+  "South America",
+  "Oceania",
+  "Antarctica",
 ];
 
-export default function RandomCountry({countries}: any) {
+export default function RandomCountry() {
   const [country, setCountry] = useState<any>(null);
   const [showName, setShowName] = useState(false);
   const [selectedContinent, setSelectedContinent] = useState("All");
@@ -23,16 +23,24 @@ export default function RandomCountry({countries}: any) {
   const fetchRandomCountry = async (continent?: string) => {
     setIsLoading(true);
     try {
+      const response = await fetch("https://restcountries.com/v3.1/all", {
+        next: { revalidate: 86400 }, // Cache for 24 hours
+      });
+      const countries: any = response.json();
       // Filter by continent and independent status
-      const filteredCountries =
-        countries.filter((c: any) => 
-          c.independent === true && 
-          (continent === "All" || !continent || c.continents.includes(continent))
-        );
+      const filteredCountries = countries.filter(
+        (c: any) =>
+          c.independent === true &&
+          (continent === "All" ||
+            !continent ||
+            c.continents.includes(continent))
+      );
 
       if (filteredCountries.length === 0) {
         // Fallback if no countries match the criteria
-        alert("No independent countries found in the selected continent. Please choose another.");
+        alert(
+          "No independent countries found in the selected continent. Please choose another."
+        );
         setIsLoading(false);
         return;
       }
@@ -42,7 +50,7 @@ export default function RandomCountry({countries}: any) {
 
       setCountry(randomCountry);
       setShowName(false);
-      setAnimationKey(prev => prev + 1); // Trigger re-render for animation
+      setAnimationKey((prev) => prev + 1); // Trigger re-render for animation
     } catch (error) {
       console.error("Error fetching country:", error);
     } finally {
@@ -58,7 +66,7 @@ export default function RandomCountry({countries}: any) {
     if (!country) return null;
 
     return (
-      <div 
+      <div
         key={animationKey}
         className="pt-4 sm:pt-6 mt-4 sm:mt-6 space-y-4 animate-fade-in w-full"
       >
@@ -67,50 +75,52 @@ export default function RandomCountry({countries}: any) {
             <h2 className="text-2xl sm:text-3xl font-bold text-gray-800">
               {country.name.common}
             </h2>
-            <p className="text-sm text-gray-500">
-              {country.name.official}
-            </p>
+            <p className="text-sm text-gray-500">{country.name.official}</p>
           </div>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
-          <DetailCard 
-            title="Region" 
-            value={country.region || "Not Available"} 
+          <DetailCard
+            title="Region"
+            value={country.region || "Not Available"}
             icon="🌍"
           />
-          <DetailCard 
-            title="Capital" 
-            value={country.capital?.[0] || "Not Available"} 
+          <DetailCard
+            title="Capital"
+            value={country.capital?.[0] || "Not Available"}
             icon="🏛️"
           />
-          <DetailCard 
-            title="Population" 
-            value={country.population ? country.population.toLocaleString() : "Not Available"}
+          <DetailCard
+            title="Population"
+            value={
+              country.population
+                ? country.population.toLocaleString()
+                : "Not Available"
+            }
             icon="👥"
           />
-          <DetailCard 
-            title="Currency" 
+          <DetailCard
+            title="Currency"
             value={
               Object.values(country.currencies || {})
                 .map((currency: any) => `${currency.name} (${currency.symbol})`)
                 .join(", ") || "Not Available"
-            } 
+            }
             icon="💰"
           />
-          <DetailCard 
-            title="Main Language" 
+          <DetailCard
+            title="Main Language"
             value={
               Object.values(country.languages || {})
                 .slice(0, 1)
                 .join(", ") || "Not Available"
-            } 
+            }
             icon="🗣️"
           />
-          <DetailCard 
-            title="Area" 
+          <DetailCard
+            title="Area"
             value={
-              country.area 
+              country.area
                 ? `${country.area.toLocaleString()} km²`
                 : "Not Available"
             }
@@ -124,14 +134,11 @@ export default function RandomCountry({countries}: any) {
             Quick Facts
           </p>
           <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
+            <li>Independent: {country.independent ? "Yes" : "No"}</li>
+            <li>UN Member: {country.unMember ? "Yes" : "No"}</li>
             <li>
-              Independent: {country.independent ? "Yes" : "No"}
-            </li>
-            <li>
-              UN Member: {country.unMember ? "Yes" : "No"}
-            </li>
-            <li>
-              Time Zones: {country.timezones?.slice(0, 2).join(", ") || "Not Available"}
+              Time Zones:{" "}
+              {country.timezones?.slice(0, 2).join(", ") || "Not Available"}
             </li>
           </ul>
         </div>
@@ -187,13 +194,14 @@ export default function RandomCountry({countries}: any) {
             disabled={isLoading}
             className={`
               w-full px-8 py-3 rounded-md text-white transition duration-300 ease-in-out
-              ${isLoading 
-                ? 'bg-gray-400 cursor-not-allowed' 
-                : 'bg-green-600 hover:bg-green-700 hover:scale-105 active:scale-95'
+              ${
+                isLoading
+                  ? "bg-gray-400 cursor-not-allowed"
+                  : "bg-green-600 hover:bg-green-700 hover:scale-105 active:scale-95"
               }
             `}
           >
-            {isLoading ? 'Generating...' : 'Generate New Country'}
+            {isLoading ? "Generating..." : "Generate New Country"}
           </button>
         </div>
       </div>
@@ -225,8 +233,14 @@ export default function RandomCountry({countries}: any) {
       {/* Custom CSS for animations */}
       <style jsx>{`
         @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
 
         .animate-fade-in {
@@ -238,14 +252,14 @@ export default function RandomCountry({countries}: any) {
 }
 
 // Reusable detail card component
-function DetailCard({ 
-  title, 
-  value, 
-  icon 
-}: { 
-  title: string, 
-  value: string, 
-  icon: string 
+function DetailCard({
+  title,
+  value,
+  icon,
+}: {
+  title: string;
+  value: string;
+  icon: string;
 }) {
   return (
     <div className="bg-gray-100 p-4 rounded-lg shadow-sm transition-all duration-300 hover:shadow-md hover:scale-105">

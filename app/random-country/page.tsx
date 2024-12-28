@@ -72,7 +72,7 @@ export default async function RandomCountryPage() {
         </p>
 
         <div className="flex justify-center mb-8">
-          <RandomCountry countries={countries} />
+          <RandomCountry />
         </div>
 
         {/* Country Generator Explanation Section */}
