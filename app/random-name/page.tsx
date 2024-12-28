@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     description:
       "Spin the wheel and randomly select names with our interactive tool. Perfect for games, classrooms, and group activities.",
     type: "website",
+    url: "https://randzy.com/random-name",
     images: [
       {
         url: "/name-picker.png",

@@ -3,7 +3,7 @@
 import React, { useState } from "react";
 
 export default function TeamGenerator() {
-  const [participants, setParticipants] = useState<string[]>([]);
+  const [participants, setParticipants] = useState<string[]>(["Istiak", "Ahmed", "Nishat"]);
   const [inputParticipant, setInputParticipant] = useState("");
   const [teamCount, setTeamCount] = useState(2);
   const [generatedTeams, setGeneratedTeams] = useState<string[][]>([]);

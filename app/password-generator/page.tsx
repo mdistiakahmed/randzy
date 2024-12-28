@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     description:
       "Generate strong, unique passwords with our easy-to-use online tool.",
     type: "website",
+    url: "https://randzy.com/password-generator",
     images: ["/password-generator.png"],
   },
   twitter: {

@@ -20,6 +20,7 @@ export const metadata: Metadata = {
     description:
       "Instantly create balanced teams with our interactive team generator. Great for sports, education, and group activities.",
     type: "website",
+    url: "https://randzy.com/team-generator",
     images: [
       {
         url: "/team-generator.png",

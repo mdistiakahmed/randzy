@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     description:
       "Easily generate secure and random PINs with our user-friendly tool.",
     type: "website",
+    url: "https://randzy.com/pin-generator",
     images: [
       {
         url: "/pin-generator.png",

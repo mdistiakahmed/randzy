@@ -30,6 +30,14 @@ const toolCategories = [
         color: "bg-purple-50",
         textColor: "text-purple-600",
       },
+      {
+        name: "Random Country",
+        href: "/random-country",
+        icon: "🌍",
+        description: "Discover random countries from around the world",
+        color: "bg-teal-50",
+        textColor: "text-teal-600",
+      },
     ],
   },
   {

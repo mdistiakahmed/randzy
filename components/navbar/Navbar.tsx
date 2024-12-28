@@ -26,6 +26,12 @@ const toolCategories = [
         icon: "🎳",
         description: "Roll virtual dice with multiple configurations",
       },
+      {
+        name: "Random Country",
+        href: "/random-country",
+        icon: "🌍",
+        description: "Discover random countries from around the world",
+      },
     ],
   },
   {

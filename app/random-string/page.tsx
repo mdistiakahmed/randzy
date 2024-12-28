@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     description:
       "Easily generate secure and random strings with our user-friendly tool.",
     type: "website",
+    url: "https://randzy.com/random-string",
     images: [
       {
         url: "/random-string.png",

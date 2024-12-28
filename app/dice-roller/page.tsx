@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     description:
       "Roll a virtual six-sided die with a single click. Easy, fun, and random!",
     type: "website",
+    url: "https://randzy.com/dice-roller",
     images: [
       {
         url: "/dice-roller.png",

@@ -76,7 +76,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable}  bg-[url('/snowflakes.png')] antialiased`}
       >
         <Navbar />
         <main className="flex-1 pt-16 md:mx-[14vw]">
