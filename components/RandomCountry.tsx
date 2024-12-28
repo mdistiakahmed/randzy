@@ -26,7 +26,7 @@ export default function RandomCountry() {
       const response = await fetch("https://restcountries.com/v3.1/all", {
         next: { revalidate: 86400 }, // Cache for 24 hours
       });
-      const countries: any = response.json();
+      const countries: any = await response.json();
       // Filter by continent and independent status
       const filteredCountries = countries.filter(
         (c: any) =>
