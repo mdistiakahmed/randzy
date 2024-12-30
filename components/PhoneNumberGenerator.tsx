@@ -320,7 +320,7 @@ const PhoneNumberGenerator = () => {
 
   return (
     <div className="mx-auto max-w-md">
-      <div className="bg-white shadow-lg rounded-lg md:p-8 text-center">
+      <div className="bg-white shadow-lg rounded-lg p-4 md:p-8 text-center">
         <h1 className="text-2xl font-bold mb-6 text-gray-800">
           US Phone Number Generator
         </h1>

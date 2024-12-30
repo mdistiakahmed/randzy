@@ -250,7 +250,7 @@ export default function PhoneNumberGeneratorPage() {
         </div>
 
         <div className="overflow-hidden">
-          <div className="p-6 sm:p-10">
+          <div className="sm:p-10">
             <PhoneNumberGenerator />
           </div>
         </div>
