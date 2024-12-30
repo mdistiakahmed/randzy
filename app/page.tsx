@@ -59,6 +59,14 @@ const toolCategories = [
         color: "bg-red-50",
         textColor: "text-red-600",
       },
+      {
+        name: "Phone Number Generator",
+        href: "/phone-number-generator",
+        icon: "📱",
+        description: "Generate random phone numbers",
+        color: "bg-pink-50",
+        textColor: "text-pink-600",
+      },
     ],
   },
   {

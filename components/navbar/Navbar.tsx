@@ -49,6 +49,12 @@ const toolCategories = [
         icon: "⚽",
         description: "Create balanced random teams",
       },
+      {
+        name: "Phone Number Generator",
+        href: "/phone-number-generator",
+        icon: "📱",
+        description: "Generate random phone numbers",
+      },
     ],
   },
   {
