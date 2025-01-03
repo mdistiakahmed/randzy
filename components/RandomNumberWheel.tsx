@@ -137,6 +137,15 @@ export default function RandomNumberWheel() {
       setGeneratedNumber(null);
       setIsSpinning(true);
       wheelRef.current.spinSpeed = Math.random() * 0.3 + 0.7;
+
+      // Send Google Analytics event
+    if (typeof window !== 'undefined' && window.gtag) {
+      window.gtag('event', 'generate_number', {
+        'event_category': 'Random Number Wheel',
+        'event_label': 'Number Generation',
+        'value': min + '-' + max
+      });
+    }
     }
   };
 
