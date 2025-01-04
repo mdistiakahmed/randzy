@@ -282,7 +282,7 @@ export default function RandomNumberWheel() {
           <span>🎲</span>Bulk Random Number Generator
         </h2>
 
-        <div className="max-w-2xl mx-auto bg-gray-50 p-6 rounded-lg">
+        <div className="max-w-2xl mx-auto lg:p-6">
           <div className="grid md:grid-cols-3 gap-4 mb-6">
             <div>
               <label className="block text-gray-700 mb-2">Min Number</label>
@@ -374,7 +374,7 @@ export default function RandomNumberWheel() {
               }}
               id="bulkGenerateButton"
             >
-              🎲 Generate 5 Random Numbers
+              Generate 5 Random Numbers
             </button>
           </div>
 

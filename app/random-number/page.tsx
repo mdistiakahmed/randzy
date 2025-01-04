@@ -95,7 +95,7 @@ export default function RandomNumberGeneratorPage() {
 
             {/* Enhanced SEO-friendly content section */}
             <section className="mt-12  rounded-xl  space-y-6">
-              <div className="bg-white rounded-lg shadow-md p-8 mt-12">
+              <div className="bg-white rounded-lg lg:shadow-md lg:p-8 mt-12">
                 <div className="grid lg:grid-cols-2 gap-8 items-center">
                   <div className="space-y-6">
                     <h2 className="text-3xl font-bold text-blue-800 flex items-center">
@@ -142,7 +142,7 @@ export default function RandomNumberGeneratorPage() {
                     </div>
                   </div>
 
-                  <div className="bg-gray-50 rounded-lg p-6 shadow-inner">
+                  <div className="rounded-lg lg:p-6 lg:shadow-inner">
                     <h2 className="text-3xl font-bold text-green-800 mb-6 flex items-center">
                       <span className="mr-4 text-4xl">🎯</span>How to Generate
                       Random Numbers
