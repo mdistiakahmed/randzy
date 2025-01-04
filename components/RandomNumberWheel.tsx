@@ -277,7 +277,7 @@ export default function RandomNumberWheel() {
       </div>
 
       {/* Multiple Random Numbers Generator Section */}
-      <div className="bg-white rounded-lg md:shadow-md md:p-8 mt-12">
+      <div className="bg-white rounded-lg  md:p-8 mt-12 lg:mt-32">
         <h2 className="text-3xl font-bold text-indigo-800 mb-6 text-center flex items-center justify-center gap-4">
           <span>🎲</span>Bulk Random Number Generator
         </h2>
@@ -361,7 +361,7 @@ export default function RandomNumberWheel() {
                 resultEl.value = randomNumbers.join(", ");
 
                 // Update button text to show count
-                buttonEl.innerHTML = `🎲 Generate ${count} Random Numbers`;
+                buttonEl.innerHTML = `Generate ${count} Random Numbers`;
 
                 // Send Google Analytics event
                 if (typeof window !== "undefined" && window.gtag) {
