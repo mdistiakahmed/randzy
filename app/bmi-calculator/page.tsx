@@ -120,7 +120,7 @@ const BMICalculatorPage = () => {
                 <h3 className="font-bold text-gray-700">Cultural Variations</h3>
                 <p className="text-gray-600">
                   BMI standards can vary across different populations and ethnic
-                  groups. What's considered a healthy weight differs based on
+                  groups. What&apos;s considered a healthy weight differs based on
                   genetic and environmental factors.
                 </p>
               </div>
@@ -188,7 +188,7 @@ const BMICalculatorPage = () => {
               <div>
                 <h3 className="font-bold text-gray-700">Dietary Strategies</h3>
                 <p className="text-gray-600">
-                  Implement sustainable eating habits that support your body's
+                  Implement sustainable eating habits that support your body&apos;s
                   nutritional needs while helping manage weight effectively.
                 </p>
               </div>
@@ -212,7 +212,7 @@ const BMICalculatorPage = () => {
                   The standard BMI formula is the same for both men and women.
                   However, body composition and fat distribution can differ
                   between genders. Athletes and muscular individuals may have a
-                  higher BMI due to muscle mass, which doesn't necessarily
+                  higher BMI due to muscle mass, which doesn&apos;t necessarily
                   indicate poor health.
                 </p>
               </div>
@@ -260,7 +260,7 @@ const BMICalculatorPage = () => {
                   How Often Should I Calculate My BMI? 📅
                 </h3>
                 <p className="text-gray-600">
-                  It's recommended to check your BMI every 3-6 months. However,
+                  It&apos;s recommended to check your BMI every 3-6 months. However,
                   focus on overall health trends rather than minor fluctuations.
                   Consistent diet, exercise, and lifestyle changes are more
                   important than occasional BMI measurements.
