@@ -86,6 +86,17 @@ const toolCategories = [
       },
     ],
   },
+  {
+    name: "Health Tools",
+    items: [
+      {
+        name: "BMI Calculator",
+        href: "/bmi-calculator",
+        icon: "⚖️",
+        description: "Calculate and understand your Body Mass Index",
+      },
+    ],
+  },
 ];
 
 export default function Navbar() {
