@@ -43,6 +43,15 @@ export default function BMICalculator() {
     if (heightInMeters > 0 && weightInKg > 0) {
       const calculatedBMI = weightInKg / (heightInMeters * heightInMeters);
       setBMI(calculatedBMI);
+
+      // Send Google Analytics event
+      if (typeof window !== "undefined" && window.gtag) {
+        window.gtag("event", "calculate_bmi", {
+          event_category: "BMI Calculator",
+          event_label: "BMI Calculation",
+          value: height + "-" + weight,
+        });
+      }
     }
   };
 
@@ -182,7 +191,7 @@ export default function BMICalculator() {
 
         {/* BMI Gauge */}
         <div className="lg:w-1/2">
-        <BMIGauge bmi={bmi} />
+          <BMIGauge bmi={bmi} />
         </div>
       </div>
     </div>
