@@ -95,6 +95,12 @@ const toolCategories = [
         icon: "⚖️",
         description: "Calculate and understand your Body Mass Index",
       },
+      {
+        name: "Calorie Calculator",
+        href: "/calorie-calculator",
+        icon: "🍽️",
+        description: "Calculate your daily calorie needs for weight management",
+      },
     ],
   },
 ];

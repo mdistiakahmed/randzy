@@ -117,6 +117,14 @@ const toolCategories = [
         color: "bg-lime-50",
         textColor: "text-lime-600",
       },
+      {
+        name: "Calorie Calculator",
+        href: "/calorie-calculator",
+        icon: "🍽️",
+        description: "Calculate your daily calorie needs for weight management",
+        color: "bg-orange-50",
+        textColor: "text-orange-600",
+      },
     ],
   },
 ];
