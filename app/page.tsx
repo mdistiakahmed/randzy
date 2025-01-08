@@ -15,6 +15,14 @@ const toolCategories = [
         textColor: "text-blue-600",
       },
       {
+        name: "Alphabet Generator",
+        href: "/random-alphabet",
+        icon: "🔤",
+        description: "Generate random alphabetic characters",
+        color: "bg-orange-50",
+        textColor: "text-orange-600",
+      },
+      {
         name: "Coin Flip",
         href: "/coin-flip",
         icon: "💰",

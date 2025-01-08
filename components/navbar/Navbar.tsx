@@ -15,6 +15,12 @@ const toolCategories = [
         description: "Generate random numbers within a specified range",
       },
       {
+        name: "Alphabet Generator",
+        href: "/random-alphabet",
+        icon: "🔤",
+        description: "Generate random alphabetic characters",
+      },
+      {
         name: "Coin Flip",
         href: "/coin-flip",
         icon: "💰",
