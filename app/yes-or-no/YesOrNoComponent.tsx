@@ -7,12 +7,8 @@ export default function YesOrNoComponent() {
     null
   );
   const [isSpinning, setIsSpinning] = useState(false);
-  const [caseType, setCaseType] = useState<"uppercase" | "lowercase" | "mixed">(
-    "uppercase"
-  );
-  const [currentRandomAlphabets, setCurrentRandomAlphabets] = useState<
-    string[]
-  >([]);
+
+
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const wheelRef = useRef({
     angle: 0,
@@ -86,7 +82,7 @@ export default function YesOrNoComponent() {
     { serial: number; value: string }[]
   >(() => {
     if (typeof window !== "undefined") {
-      const savedHistory = localStorage.getItem("randomAlphabetHistory");
+      const savedHistory = localStorage.getItem("yesOrNoHistory");
       return savedHistory ? JSON.parse(savedHistory) : [];
     }
     return [];
@@ -96,7 +92,7 @@ export default function YesOrNoComponent() {
   useEffect(() => {
     if (typeof window !== "undefined") {
       localStorage.setItem(
-        "randomAlphabetHistory",
+        "yesOrNoHistory",
         JSON.stringify(alphabetHistory)
       );
     }
@@ -116,26 +112,6 @@ export default function YesOrNoComponent() {
     canvas.width = size;
     canvas.height = size;
 
-    if (isSpinning) {
-      alphabetShiftInterval = setInterval(() => {
-        const newAlphabets = Array.from({ length: 5 }, () => {
-          const randomChar = String.fromCharCode(
-            65 + Math.floor(Math.random() * 26)
-          );
-          switch (caseType) {
-            case "uppercase":
-              return randomChar;
-            case "lowercase":
-              return randomChar.toLowerCase();
-            case "mixed":
-              return Math.random() > 0.5
-                ? randomChar
-                : randomChar.toLowerCase();
-          }
-        });
-        setCurrentRandomAlphabets(newAlphabets);
-      }, 100);
-    }
 
     const animate = () => {
       if (!canvas || !ctx) return;
@@ -148,8 +124,6 @@ export default function YesOrNoComponent() {
 
         if (Math.abs(wheelRef.current.spinSpeed) < 0.01) {
           setIsSpinning(false);
-          clearInterval(alphabetShiftInterval);
-          setCurrentRandomAlphabets([]);
 
           const finalAlphabet = Math.random() <= 0.5 ? "Yes" : "No";
 
@@ -172,9 +146,8 @@ export default function YesOrNoComponent() {
 
     return () => {
       cancelAnimationFrame(animationFrameId);
-      clearInterval(alphabetShiftInterval);
     };
-  }, [isSpinning, caseType]);
+  }, [isSpinning]);
 
   const drawWheel = (
     ctx: CanvasRenderingContext2D,
@@ -249,10 +222,9 @@ export default function YesOrNoComponent() {
 
       // Send Google Analytics event
       if (typeof window !== "undefined" && window.gtag) {
-        window.gtag("event", "generate_alphabet", {
-          event_category: "Random Alphabet Wheel",
-          event_label: "Alphabet Generation",
-          value: caseType,
+        window.gtag("event", "yes_or_no", {
+          event_category: "Yes or No Wheel",
+          event_label: "Yes or No Generation",
         });
       }
     }
