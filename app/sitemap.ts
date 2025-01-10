@@ -79,6 +79,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/random-alphabet`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/bmi-calculator`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/calorie-calculator`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.6,
     }
   ]
 }
