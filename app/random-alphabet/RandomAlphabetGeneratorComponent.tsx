@@ -20,8 +20,6 @@ export default function RandomAlphabetWheel() {
     deceleration: 0.98,
   });
 
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [generatedLetter, setGeneratedLetter] = useState("");
 
   const colors = ["#3369e8", "#009925", "#d50f25", "#EEB211", "#d50f25"];
 
@@ -166,9 +164,7 @@ export default function RandomAlphabetWheel() {
               : randomChar.toLowerCase();
 
           setGeneratedAlphabet(finalAlphabet);
-          setGeneratedLetter(finalAlphabet);
           triggerConfetti();
-          setIsModalOpen(true);
 
           // Add generated alphabet to history with serial number
           setAlphabetHistory((prev) => [
@@ -267,7 +263,6 @@ export default function RandomAlphabetWheel() {
     if (!isSpinning) {
       setGeneratedAlphabet(null);
       setIsSpinning(true);
-      setGeneratedLetter("");
       wheelRef.current.spinSpeed = Math.random() * 0.3 + 0.7;
 
       // Send Google Analytics event
