@@ -46,6 +46,14 @@ const toolCategories = [
         color: "bg-teal-50",
         textColor: "text-teal-600",
       },
+      {
+        name: "Yes or No",
+        href: "/yes-or-no",
+        icon: "🔮",
+        description: "Generate random yes or no answers",
+        color: "bg-red-50",
+        textColor: "text-red-600",
+      },
     ],
   },
   {
