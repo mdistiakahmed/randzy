@@ -80,6 +80,7 @@ export default function RandomNumberWheel() {
           setCurrentRandomNumbers([]);
           const finalNumber = Math.floor(Math.random() * (max - min + 1)) + min;
           setGeneratedNumber(finalNumber);
+          triggerConfetti();
           // Add generated number to history with serial number
           setNumberHistory((prev) => [
             { serial: prev.length + 1, value: finalNumber },
@@ -150,7 +151,7 @@ export default function RandomNumberWheel() {
 
     // Display number
     ctx.save();
-    const fontSize = Math.min(36, width * 0.1);
+    const fontSize = Math.min(46, width * 0.5);
     ctx.font = `${fontSize}px Arial`;
     ctx.textAlign = "center";
     ctx.fillStyle = "black";
@@ -182,6 +183,67 @@ export default function RandomNumberWheel() {
     }
   };
 
+
+  const colors = ["#3369e8", "#009925", "#d50f25", "#EEB211", "#d50f25"];
+  const triggerConfetti = () => {
+    const canvas = document.createElement("canvas");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    canvas.style.position = "fixed";
+    canvas.style.top = "0";
+    canvas.style.left = "0";
+    canvas.style.pointerEvents = "none";
+    canvas.style.zIndex = "9999";
+    document.body.appendChild(canvas);
+
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
+
+    const particles: any[] = [];
+    const particleCount = 100;
+
+    for (let i = 0; i < particleCount; i++) {
+      particles.push({
+        x: canvas.width / 2,
+        y: canvas.height / 2,
+        radius: Math.random() * 10 + 5,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        speedX: (Math.random() - 0.5) * 10,
+        speedY: (Math.random() - 0.5) * 10,
+        alpha: 1,
+      });
+    }
+
+    const animate = () => {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      particles.forEach((p, index) => {
+        p.x += p.speedX;
+        p.y += p.speedY;
+        p.speedY += 0.2;
+        p.alpha -= 0.02;
+
+        ctx.beginPath();
+        ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+        ctx.fillStyle = p.color;
+        ctx.globalAlpha = p.alpha;
+        ctx.fill();
+
+        if (p.alpha <= 0) {
+          particles.splice(index, 1);
+        }
+      });
+
+      if (particles.length > 0) {
+        requestAnimationFrame(animate);
+      } else {
+        document.body.removeChild(canvas);
+      }
+    };
+
+    animate();
+  };
+
   // New function to clear history
   const clearHistory = () => {
     setNumberHistory([]);
@@ -192,14 +254,14 @@ export default function RandomNumberWheel() {
       <div className="w-full flex flex-col md:flex-row items-center justify-between">
         {/* New Number Section */}
         <div className="w-full md:w-1/3 mb-6 md:mb-0 md:pr-6">
-          <div className="space-y-4">
+          <div className="space-y-4 text-xs lg:text-sm">
             <div>
               <label className="block text-gray-700 mb-2">Minimum Number</label>
               <input
                 type="number"
                 value={min}
                 onChange={(e) => setMin(Number(e.target.value))}
-                className="w-full px-3 py-2 border rounded-md"
+                className="w-full px-3 py-1 lg:px-3 lg:py-2 border rounded-md"
                 disabled={isSpinning}
               />
             </div>
@@ -209,7 +271,7 @@ export default function RandomNumberWheel() {
                 type="number"
                 value={max}
                 onChange={(e) => setMax(Number(e.target.value))}
-                className="w-full px-3 py-2 border rounded-md"
+                className="w-full px-3 py-1 lg:px-3 lg:py-2 border rounded-md"
                 disabled={isSpinning}
               />
             </div>

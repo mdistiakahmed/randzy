@@ -97,6 +97,30 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: currentDate,
       changeFrequency: 'weekly',
       priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/yes-or-no`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/random-country`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/uuid-generator`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.6,
+    },
+    {
+      url: `${baseUrl}/phone-number-generator`,
+      lastModified: currentDate,
+      changeFrequency: 'weekly',
+      priority: 0.6,
     }
   ]
 }
