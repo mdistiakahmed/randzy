@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import RandomNumberWheel from "@/components/RandomNumberWheel";
 import Script from "next/script";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
@@ -592,9 +593,52 @@ export default function RandomNumberGeneratorPage() {
 
               <div className="mt-10 text-center bg-blue-100 p-6 rounded-lg">
                 <p className="text-gray-800 text-lg italic">
-                  &apos;Exploring the world of randomness, one number at a time.&apos;
+                  &apos;Exploring the world of randomness, one number at a
+                  time.&apos;
                 </p>
               </div>
+            </div>
+          </section>
+
+          {/* More Random Tools Section */}
+          <section
+            id="more-random-tools"
+            className="bg-blue-50 py-12 px-4 lg:px-8 text-center"
+          >
+            <h2 className="text-3xl font-bold text-blue-900 mb-8">
+              Explore More Random Tools
+            </h2>
+            <div className="flex flex-wrap justify-center gap-4">
+              <Link
+                href="/random-alphabet"
+                className="bg-white text-blue-700 px-4 py-2 rounded-md hover:bg-blue-100 transition-colors"
+              >
+                Random Alphabet
+              </Link>
+              <Link
+                href="/coin-flip"
+                className="bg-white text-blue-700 px-4 py-2 rounded-md hover:bg-blue-100 transition-colors"
+              >
+                Coin Flip
+              </Link>
+              <Link
+                href="/dice-roller"
+                className="bg-white text-blue-700 px-4 py-2 rounded-md hover:bg-blue-100 transition-colors"
+              >
+                Dice Roller
+              </Link>
+              <Link
+                href="/random-country"
+                className="bg-white text-blue-700 px-4 py-2 rounded-md hover:bg-blue-100 transition-colors"
+              >
+                Random Country
+              </Link>
+              <Link
+                href="/yes-or-no"
+                className="bg-white text-blue-700 px-4 py-2 rounded-md hover:bg-blue-100 transition-colors"
+              >
+                Yes or No
+              </Link>
             </div>
           </section>
         </div>

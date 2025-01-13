@@ -606,6 +606,48 @@ export default function RandomNumberGeneratorPage() {
                 </div>
               </div>
             </section>
+
+            {/* More Random Tools Section */}
+            <section
+              id="more-random-tools"
+              className="bg-blue-50 py-12 px-4 lg:px-8 text-center"
+            >
+              <h2 className="text-3xl font-bold text-blue-900 mb-8">
+                Explore More Random Tools
+              </h2>
+              <div className="flex flex-wrap justify-center gap-4">
+                <Link
+                  href="/random-number"
+                  className="bg-white text-blue-700 px-4 py-2 rounded-md hover:bg-blue-100 transition-colors"
+                >
+                  Random Number
+                </Link>
+                <Link
+                  href="/coin-flip"
+                  className="bg-white text-blue-700 px-4 py-2 rounded-md hover:bg-blue-100 transition-colors"
+                >
+                  Coin Flip
+                </Link>
+                <Link
+                  href="/dice-roller"
+                  className="bg-white text-blue-700 px-4 py-2 rounded-md hover:bg-blue-100 transition-colors"
+                >
+                  Dice Roller
+                </Link>
+                <Link
+                  href="/random-country"
+                  className="bg-white text-blue-700 px-4 py-2 rounded-md hover:bg-blue-100 transition-colors"
+                >
+                  Random Country
+                </Link>
+                <Link
+                  href="/yes-or-no"
+                  className="bg-white text-blue-700 px-4 py-2 rounded-md hover:bg-blue-100 transition-colors"
+                >
+                  Yes or No
+                </Link>
+              </div>
+            </section>
           </div>
         </div>
       </div>
