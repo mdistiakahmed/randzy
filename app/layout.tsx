@@ -5,6 +5,7 @@ import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import Head from 'next/head';
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -77,10 +78,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9516918341435316"
-        crossOrigin="anonymous"></script>
-      </Head>
+      <head>
+        {/* Google AdSense */}
+        <Script
+          strategy="afterInteractive"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9516918341435316"
+          crossOrigin="anonymous"
+        />
+      </head>
       <GoogleAnalytics gaId="G-PQSLL3RMME" />
       <body
         className={`${geistSans.variable} ${geistMono.variable}  bg-[url('/snowflakes.png')] antialiased`}
