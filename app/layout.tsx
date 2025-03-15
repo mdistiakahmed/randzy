@@ -6,6 +6,7 @@ import Footer from "@/components/footer/Footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import Head from 'next/head';
 import Script from "next/script";
+import GoogleAd from "@/components/GoogleAd";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -92,11 +93,13 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable}  bg-[url('/snowflakes.png')] antialiased`}
       >
         <Navbar />
-        <main className="flex-1 pt-16 md:mx-[14vw]">
-          {" "}
-          {/* Add top padding to account for fixed navbar */}
-          {children}
-        </main>
+        <div className="flex justify-between">
+          <div className="hidden md:block w-1/6 "> 
+            <GoogleAd adSlot="5795252154" />
+          </div>
+          <main className="flex-1 pt-16 md:mx-0"> {/* Adjusted main content */} {children} </main>
+          <div className="hidden md:block w-1/6  "> {/* Right Ad */} </div>
+        </div>
         <Footer />
       </body>
     </html>
