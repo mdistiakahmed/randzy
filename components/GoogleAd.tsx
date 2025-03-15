@@ -1,20 +1,21 @@
 "use client";
-import React, { Fragment, ReactNode, useEffect } from 'react';
+import React, { Fragment, ReactNode, Suspense, useEffect } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 
 type Props = {
-    children: ReactNode;
-  };
-  
-  declare global {
-    interface Window {
-      adsbygoogle?: any | any[];
-    }
+  children: ReactNode;
+};
+
+declare global {
+  interface Window {
+    adsbygoogle?: any | any[];
   }
+}
 
 const GoogleAd = ({ children }: Props) => {
-    const pathname = usePathname();
+  const pathname = usePathname();
   const searchParams = useSearchParams();
+
   useEffect(() => {
     try {
       (window.adsbygoogle = window.adsbygoogle || []).push({});
@@ -22,7 +23,19 @@ const GoogleAd = ({ children }: Props) => {
       console.error(err);
     }
   }, [pathname, searchParams]);
+
   return <Fragment>{children}</Fragment>;
 };
 
-export default GoogleAd;
+// Wrap the GoogleAd component with Suspense
+const SuspenseWrapper = ({ children }: { children: ReactNode }) => {
+  return <Suspense fallback={<div>Loading...</div>}>{children}</Suspense>;
+};
+
+export default function GoogleAdWithSuspense(props: Props) {
+  return (
+    <SuspenseWrapper>
+      <GoogleAd {...props} />
+    </SuspenseWrapper>
+  );
+}
