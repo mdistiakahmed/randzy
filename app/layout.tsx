@@ -95,10 +95,28 @@ export default function RootLayout({
         <Navbar />
         <div className="flex justify-between">
           <div className="hidden md:block w-1/6 "> 
-            <GoogleAd adSlot="5795252154" />
+            <GoogleAd>  
+              <ins className="adsbygoogle"
+                style={{display:"block"}}
+                data-ad-client="ca-pub-9516918341435316"
+                data-ad-slot="5795252154"
+                data-ad-format="auto"
+                data-full-width-responsive="true">
+              </ins>
+            </GoogleAd>
           </div>
           <main className="flex-1 pt-16 md:mx-0"> {/* Adjusted main content */} {children} </main>
-          <div className="hidden md:block w-1/6  "> {/* Right Ad */} </div>
+          <div className="hidden md:block w-1/6  "> 
+            <GoogleAd>  
+            <ins className="adsbygoogle"
+              style={{display:"block"}}
+              data-ad-client="ca-pub-9516918341435316"
+              data-ad-slot="9056674468"
+              data-ad-format="auto"
+              data-full-width-responsive="true">
+            </ins>
+            </GoogleAd>
+           </div>
         </div>
         <Footer />
       </body>
