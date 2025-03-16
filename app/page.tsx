@@ -143,6 +143,19 @@ const toolCategories = [
       },
     ],
   },
+  {
+    name: "Quiz",
+    tools: [
+      {
+        name: "Flag Quiz",
+        href: "/flag-quiz",
+        icon: "🚩",
+        description: "Test your knowledge of flags and countries with our engaging quiz. Learn and have fun!",
+        color: "bg-blue-50",
+        textColor: "text-blue-600",
+      },
+    ],
+  },
 ];
 
 export default function Home() {
