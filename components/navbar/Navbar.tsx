@@ -115,6 +115,17 @@ const toolCategories = [
       },
     ],
   },
+  {
+    name: "Quiz",
+    items: [
+      {
+        name: "Flag Quiz",
+        href: "/flag-quiz",
+        icon: "🚩",
+        description: "Test your knowledge of flags and countries with our engaging quiz. Learn and have fun!",
+      }
+    ],
+  },
 ];
 
 export default function Navbar() {
