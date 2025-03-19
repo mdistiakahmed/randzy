@@ -38,12 +38,6 @@ const toolCategories = [
         icon: "🌍",
         description: "Discover random countries from around the world",
       },
-      {
-        name: "Yes or No",
-        href: "/yes-or-no",
-        icon: "🔮",
-        description: "Generate random yes or no answers",
-      },
     ],
   },
   {
