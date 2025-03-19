@@ -416,9 +416,9 @@ console.log(generateHash("Hello, World!"));
               What is the Best Hash Algorithm?
             </h2>
             <p className="text-lg text-gray-700 leading-relaxed mb-8">
-              Determining the "best" hash algorithm depends heavily on the
+              Determining the &quot;best&quot; hash algorithm depends heavily on the
               specific requirements of your application. There is no single
-              "best" algorithm for every scenario.
+              &quot;best&quot; algorithm for every scenario.
             </p>
 
             <div className="mb-8">
@@ -485,7 +485,7 @@ console.log(generateHash("Hello, World!"));
 
             <div>
               <p className="text-gray-700 leading-relaxed">
-                The "best" hash algorithm is the one that best meets the
+                The &quot;best&quot; hash algorithm is the one that best meets the
                 specific security and performance requirements of your
                 application. Always prioritize security when handling sensitive
                 data, and stay informed about the latest security
