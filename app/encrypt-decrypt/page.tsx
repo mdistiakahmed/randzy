@@ -173,8 +173,8 @@ export default function EncryptionDecryptionPage() {
                 key. Ensure it is correct and secure.
               </li>
               <li>
-                <strong>Encrypt or Decrypt:</strong> Click the "Encrypt" or
-                "Decrypt" button to perform the operation.
+                <strong>Encrypt or Decrypt:</strong> Click the &quot;Encrypt&quot; or
+                &quot;Decrypt&quot; button to perform the operation.
               </li>
               <li>
                 <strong>View Result:</strong> The encrypted or decrypted output
