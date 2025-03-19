@@ -112,6 +112,14 @@ const toolCategories = [
         color: "bg-cyan-50",
         textColor: "text-cyan-600",
       },
+      {
+        name: "Hash Generator",
+        href: "/hash-generator",
+        icon: "🔒",
+        description: "Generate hash values for strings",
+        color: "bg-lime-50",
+        textColor: "text-lime-600",
+      }
     ],
   },
   {

@@ -90,6 +90,12 @@ const toolCategories = [
         icon: "🧩",
         description: "Create random alphanumeric strings",
       },
+      {
+        name: "Hash Generator",
+        href: "/hash-generator",
+        icon: "🔒",
+        description: "Generate hash values for strings",
+      },
     ],
   },
   {
