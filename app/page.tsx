@@ -119,6 +119,13 @@ const toolCategories = [
         description: "Generate hash values for strings",
         color: "bg-lime-50",
         textColor: "text-lime-600",
+      }, {
+        name: "Encrypt Decrypt",
+        href: "/encrypt-decrypt",
+        icon: "🔓",
+        description: "Encrypt and decrypt your data securely online with various algorithms like AES, RSA, and DES.",
+        color: "bg-emerald-50",
+        textColor: "text-emerald-600",
       }
     ],
   },

@@ -96,6 +96,13 @@ const toolCategories = [
         icon: "🔒",
         description: "Generate hash values for strings",
       },
+
+      {
+        name: "Encrypt Decrypt",
+        href: "/encrypt-decrypt",
+        icon: "🔓",
+        description: "Encrypt and decrypt text using various algorithms",
+      },
     ],
   },
   {
