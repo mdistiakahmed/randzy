@@ -75,6 +75,14 @@ const toolCategories = [
         color: "bg-pink-50",
         textColor: "text-pink-600",
       },
+      {
+        name: "Text to HTML",
+        href: "/text-to-html",
+        icon: "📝",
+        description: "Convert plain text to HTML",
+        color: "bg-green-50",
+        textColor: "text-green-600",
+      }
     ],
   },
   {

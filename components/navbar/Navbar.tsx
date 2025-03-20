@@ -61,6 +61,12 @@ const toolCategories = [
         icon: "📱",
         description: "Generate random phone numbers",
       },
+      {
+        name: "Text to HTML",
+        href: "/text-to-html",
+        icon: "📝",
+        description: "Convert plain text to HTML",
+      }
     ],
   },
   {
