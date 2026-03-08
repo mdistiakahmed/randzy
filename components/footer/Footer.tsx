@@ -91,10 +91,24 @@ const Footer: React.FC = () => {
               Our Services
             </h3>
             <ul className="space-y-2">
-              <li className="text-gray-300 text-sm">Web Development</li>
-              <li className="text-gray-300 text-sm">Mobile Solutions</li>
-              <li className="text-gray-300 text-sm">Cloud Engineering</li>
-              <li className="text-gray-300 text-sm">Tech Consultation</li>
+              <li className="text-gray-300 text-sm">
+                <a
+                  href="https://www.railthailand.com/"
+                  target="_blank"
+                  className=" hover:text-red-500 transition-colors"
+                >
+                  RailThailand.com
+                </a>
+              </li>
+              <li className="text-gray-300 text-sm">
+                <a
+                  href="https://www.trainjatri.com/"
+                  target="_blank"
+                  className=" hover:text-red-500 transition-colors"
+                >
+                  TrainJatri.com
+                </a>
+              </li>
             </ul>
           </div>
 
