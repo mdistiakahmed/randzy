@@ -4,9 +4,10 @@ import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import Head from 'next/head';
+import Head from "next/head";
 import Script from "next/script";
 import GoogleAd from "@/components/GoogleAd";
+import AdSense from "@/components/AdSense";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -80,13 +81,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Google AdSense */}
-        <Script
-          strategy="afterInteractive"
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9516918341435316"
-          crossOrigin="anonymous"
-        />
+        <AdSense />
       </head>
       <GoogleAnalytics gaId="G-PQSLL3RMME" />
       <body
@@ -94,29 +89,34 @@ export default function RootLayout({
       >
         <Navbar />
         <div className="flex justify-between">
-          <div className="hidden md:block w-1/6 pt-36"> 
-            <GoogleAd>  
-              <ins className="adsbygoogle"
-                style={{display:"block"}}
+          <div className="hidden md:block w-1/6 pt-36">
+            <GoogleAd>
+              <ins
+                className="adsbygoogle"
+                style={{ display: "block" }}
                 data-ad-client="ca-pub-9516918341435316"
                 data-ad-slot="5795252154"
                 data-ad-format="auto"
-                data-full-width-responsive="true">
-              </ins>
+                data-full-width-responsive="true"
+              ></ins>
             </GoogleAd>
           </div>
-          <main className="flex-1 pt-16 md:mx-0"> {/* Adjusted main content */} {children} </main>
-          <div className="hidden md:block w-1/6 pt-36"> 
-            <GoogleAd>  
-            <ins className="adsbygoogle"
-              style={{display:"block"}}
-              data-ad-client="ca-pub-9516918341435316"
-              data-ad-slot="9056674468"
-              data-ad-format="auto"
-              data-full-width-responsive="true">
-            </ins>
+          <main className="flex-1 pt-16 md:mx-0">
+            {" "}
+            {/* Adjusted main content */} {children}{" "}
+          </main>
+          <div className="hidden md:block w-1/6 pt-36">
+            <GoogleAd>
+              <ins
+                className="adsbygoogle"
+                style={{ display: "block" }}
+                data-ad-client="ca-pub-9516918341435316"
+                data-ad-slot="9056674468"
+                data-ad-format="auto"
+                data-full-width-responsive="true"
+              ></ins>
             </GoogleAd>
-           </div>
+          </div>
         </div>
         <Footer />
       </body>
